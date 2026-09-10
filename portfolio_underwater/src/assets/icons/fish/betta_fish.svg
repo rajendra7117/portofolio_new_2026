@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Betta fish illustration">
+  <g fill="none" stroke="none">
+    <path d="M33 62c13-22 39-34 68-34 17 0 32 5 46 18 13 12 18 28 15 39-9 18-35 27-61 28-24 1-43-8-58-25-5-7-8-17-10-26z" fill="#8ad9f6"/>
+    <path d="M69 24l-16-24 38 19-14 5z" fill="#bfefff"/>
+    <path d="M27 64l-20 15 20 14c5-10 5-19 0-29z" fill="#4ab6dc"/>
+    <path d="M79 25l12-22 26 21-21 18-17-17z" fill="#6dc9ee"/>
+    <path d="M88 86l15 24 10-28-25 4z" fill="#6fcdf0"/>
+    <path d="M128 74c14 6 20 16 27 30-20 0-33-7-46-17-7-6-14-13-17-26 12 4 24 8 36 13z" fill="#0a4a7d" opacity="0.28"/>
+    <path d="M58 57c13-4 24-3 35 5" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M93 48c10-4 22-5 34-1" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <circle cx="136" cy="60" r="4" fill="#0b3d69"/>
+    <circle cx="136" cy="60" r="1.5" fill="#ebfeff"/>
+    <path d="M74 77c11 10 22 16 36 18" stroke="#0b3d69" stroke-width="3" stroke-linecap="round" opacity="0.68"/>
+  </g>
+</svg>

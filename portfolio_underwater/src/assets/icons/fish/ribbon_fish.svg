@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 120" role="img" aria-label="Ribbon fish illustration">
+  <g fill="none" stroke="none">
+    <path d="M18 62c9-20 24-33 48-42 26-11 56-10 81 7 17 12 28 31 26 49-7 12-24 23-42 29-26 9-57 9-82-4-14-7-25-17-31-39z" fill="#7ad6f6"/>
+    <path d="M27 62l-17 12 17 12c4-8 4-16 0-24z" fill="#2b9cc9"/>
+    <path d="M57 28l-11-19 27 11-16 8z" fill="#d5faff" opacity="0.42"/>
+    <path d="M92 20l18-18 26 18-21 19-23-19z" fill="#9ee5ff"/>
+    <path d="M79 79l19 24 12-24-31 0z" fill="#4ab1d9"/>
+    <path d="M70 52c11-3 21-3 33 2" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+    <path d="M103 58c12-8 25-11 40-11" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M110 82c10 10 20 16 35 20" stroke="#0b3d69" stroke-width="3.5" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="154" cy="57" r="4.5" fill="#0b3d69"/>
+    <circle cx="154" cy="57" r="1.4" fill="#effcff"/>
+  </g>
+</svg>

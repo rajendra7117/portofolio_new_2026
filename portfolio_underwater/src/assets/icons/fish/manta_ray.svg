@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Manta ray illustration">
+  <g fill="none" stroke="none">
+    <path d="M26 64c10-28 25-42 45-49 24-8 52-4 73 14 17 15 24 37 21 57-17 11-39 16-62 16-31 0-60-11-77-38z" fill="#82d9f7"/>
+    <path d="M26 67c18-4 34-4 53 0-7 13-17 24-31 31-15-8-25-19-22-31z" fill="#d9fafe" opacity="0.35"/>
+    <path d="M77 44c15-18 33-28 53-31" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+    <path d="M123 57c18 7 32 17 46 34" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M52 66c13 13 25 23 40 30" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M85 29l-17-22 35 17-18 5z" fill="#b5efff"/>
+    <path d="M116 90l17 20 9-19-26-1z" fill="#53c8ee"/>
+    <circle cx="138" cy="64" r="4" fill="#0b3d69"/>
+    <circle cx="138" cy="64" r="1.5" fill="#edfeff"/>
+  </g>
+</svg>

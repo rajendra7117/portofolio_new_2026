@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" role="img" aria-label="Sunfish illustration">
+  <g fill="none" stroke="none">
+    <path d="M28 74c9-30 31-48 66-54 35-5 72 11 90 45 7 13 8 25 2 35-8 18-31 30-67 36-28 5-59-2-79-23-13-13-17-23-12-39z" fill="#79d5f0"/>
+    <path d="M52 49c12-17 34-28 56-31 18-3 37 2 51 13-22 2-39 11-54 27-11 12-21 28-28 40-12-11-17-31-25-49z" fill="#d5faff" opacity="0.4"/>
+    <path d="M35 74l-17 12 17 12c4-8 4-16 0-24z" fill="#2d9fd0"/>
+    <path d="M88 38l17-25 24 18-18 21-23-14z" fill="#9adffc"/>
+    <path d="M93 95l17 21 9-23-26 2z" fill="#54c3f0"/>
+    <path d="M63 76c12-3 25-4 40 0" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.74"/>
+    <path d="M97 63c12-6 24-9 37-8" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M91 93c14 8 27 13 43 16" stroke="#0b3d69" stroke-width="3.5" stroke-linecap="round" opacity="0.68"/>
+    <circle cx="145" cy="63" r="4.5" fill="#0b3d69"/>
+    <circle cx="145" cy="63" r="1.5" fill="#effcff"/>
+  </g>
+</svg>

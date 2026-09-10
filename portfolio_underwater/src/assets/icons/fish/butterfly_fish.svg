@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Butterfly fish illustration">
+  <g fill="none" stroke="none">
+    <path d="M26 58c10-32 38-52 72-52 29 0 54 20 68 48 6 12 7 28-4 38-27 24-73 18-106 8-12-4-22-13-30-42z" fill="#7dd4f4"/>
+    <path d="M94 21c22-16 48-22 72-17-12 9-21 18-28 31-9 15-18 25-34 36 0-14 1-31-10-50z" fill="#d8f6ff" opacity="0.38"/>
+    <path d="M35 58l-19 13 19 13c4-10 5-17 0-26z" fill="#3ca4d0"/>
+    <path d="M101 18l16-23 28 22-19 16-25-15z" fill="#9fe1ff"/>
+    <path d="M96 88l18 24 8-24-26 0z" fill="#64c7ef"/>
+    <path d="M86 59h52c10 0 19 7 23 17-17 6-38 10-59 9-17 0-32-3-46-9 5-11 16-17 30-17z" fill="#0b4e82" opacity="0.25"/>
+    <path d="M53 59c12-3 20-1 30 7" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M91 44c10-4 20-4 30 1" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <path d="M92 72c9 11 20 21 34 27" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M121 49c12-9 23-13 35-13" stroke="#0b3d69" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="155" cy="60" r="4" fill="#0b3d69"/>
+    <circle cx="155" cy="60" r="1.5" fill="#e6fcff"/>
+  </g>
+</svg>

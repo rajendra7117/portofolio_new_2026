@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-label="Koi fish illustration">
+  <g fill="none" stroke="none">
+    <path d="M31 62c19-22 48-35 82-36 27-1 53 10 70 31 7 9 13 21 13 32-18 9-41 15-69 17-34 2-62-2-89-17-7-5-12-12-16-27z" fill="#59c9f0"/>
+    <path d="M80 31c10-16 25-27 43-28 19-2 35 6 53 19-25 0-40 10-57 24-9 7-21 15-39 13z" fill="#d8fbff" opacity="0.34"/>
+    <path d="M36 62l-24 12 24 12c5-8 5-16 0-24z" fill="#269cce"/>
+    <path d="M93 25l-12-22 34 17-22 5z" fill="#68d0ee"/>
+    <path d="M134 34l30-21 24 22-34 19-20 0z" fill="#70d9ff"/>
+    <path d="M71 85l17 22 7-21-24-1z" fill="#42b9e1"/>
+    <path d="M81 72c22 11 43 17 63 18" stroke="#0a3f6d" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M129 65c15-7 27-12 41-13" stroke="#0a3f6d" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M82 56c18 0 30 9 40 23" stroke="#0a3f6d" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="145" cy="58" r="6" fill="#ff7d52"/>
+    <circle cx="145" cy="58" r="3" fill="#ffb17b"/>
+    <path d="M128 50c7-8 17-11 29-10" stroke="#0a3f6d" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M43 54c12 1 25 2 38 1" stroke="#0a3f6d" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+  </g>
+</svg>

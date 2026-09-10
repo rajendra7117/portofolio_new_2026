@@ -1,0 +1,143 @@
+:root {
+  --deep-ocean: #061A36;
+  --dark-ocean: #073B6F;
+  --ocean-blue: #0B65A9;
+  --bright-blue: #0F8ED1;
+  --aqua: #10C4E8;
+  --light-aqua: #66E5FF;
+  --sky-aqua: #B8F1FF;
+  --seaweed-dark: #0E6B52;
+  --seaweed-green: #18B26B;
+  --seaweed-light: #6DDC3C;
+  --coral: #FF6B3D;
+  --coral-yellow: #FF9A00;
+  --sand: #E7D8A4;
+  --rock: #0A2F4F;
+  --text-primary: #EAFDFF;
+  --text-secondary: rgba(234, 253, 255, 0.8);
+  --page-bg: #04182d;
+  --panel-bg: rgba(17, 52, 88, 0.72);
+  --card-surface: rgba(7, 59, 111, 0.42);
+  --border-soft: rgba(184, 241, 255, 0.18);
+  --shadow-soft: rgba(1, 10, 18, 0.28);
+  --hero-glow: rgba(16, 196, 232, 0.3);
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='light'] {
+  --deep-ocean: #dff6ff;
+  --dark-ocean: #cfe9ff;
+  --ocean-blue: #8bd5ff;
+  --bright-blue: #39a7dd;
+  --aqua: #0aaed8;
+  --light-aqua: #75d8ff;
+  --sky-aqua: #0c5a8f;
+  --seaweed-dark: #0e7a62;
+  --seaweed-green: #38c28a;
+  --seaweed-light: #7adf78;
+  --page-bg: #edf8ff;
+  --text-primary: #07283f;
+  --text-secondary: rgba(7, 40, 63, 0.8);
+  --panel-bg: rgba(255, 255, 255, 0.62);
+  --card-surface: rgba(255, 255, 255, 0.7);
+  --border-soft: rgba(12, 90, 143, 0.14);
+  --shadow-soft: rgba(73, 122, 164, 0.12);
+  --hero-glow: rgba(30, 161, 214, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+#root,
+main,
+section,
+article,
+button,
+a,
+input,
+textarea,
+select,
+.navbar,
+.nav-panel,
+.nav-links a,
+.theme-toggle,
+.project-card,
+.skill-card,
+.cert-card,
+.contact-card,
+.timeline-card,
+.tag-pill,
+.contact-icon,
+.skill-icon,
+.back-to-top,
+.brand,
+.brand-mark,
+.primary-btn,
+.secondary-btn,
+.cert-badge,
+.footer-meta a {
+  transition: background 0.35s ease, background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, fill 0.35s ease, stroke 0.35s ease;
+}
+
+body,
+button,
+a {
+  font-family: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--page-bg) 0%, #061d38 100%);
+}
+
+main {
+  background: linear-gradient(180deg, rgba(4, 24, 45, 0.06), rgba(7, 59, 111, 0.08));
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--light-aqua);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}

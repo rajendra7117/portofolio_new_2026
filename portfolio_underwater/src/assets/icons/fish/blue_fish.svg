@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Blue fish illustration">
+  <g fill="none" stroke="none">
+    <path d="M21 62c8-18 24-31 49-39 24-8 54-7 80 8 16 9 28 27 29 43-12 17-39 31-71 33-28 1-53-8-71-25-8-8-12-15-16-20z" fill="#7acaf0"/>
+    <path d="M31 58l-19 12 19 11c4-9 5-15 0-23z" fill="#2d9ad0"/>
+    <path d="M79 27l-15-22 31 14-16 8z" fill="#c0f2ff" opacity="0.4"/>
+    <path d="M107 28l18-18 26 18-23 18-21-18z" fill="#98dff8"/>
+    <path d="M87 74l17 22 11-23-28 1z" fill="#56c0ea"/>
+    <path d="M73 52c11-5 23-6 36-3" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+    <path d="M98 61c12-7 27-11 45-11" stroke="#0b3d69" stroke-width="4" stroke-linecap="round" opacity="0.72"/>
+    <circle cx="146" cy="58" r="4.5" fill="#0b3d69"/>
+    <circle cx="146" cy="58" r="1.4" fill="#ecfeff"/>
+  </g>
+</svg>
