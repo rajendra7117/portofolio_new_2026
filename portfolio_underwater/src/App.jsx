@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'motion/react'
-import { ArrowRight, GitBranch, Globe, Mail } from 'lucide-react'
+import { ArrowRight, GitBranch, Globe, Mail, X } from 'lucide-react'
 import Navbar from './components/Navbar'
 import Bubbles from './components/underwater/Bubbles'
 import FishSchool from './components/underwater/FishSchool'
@@ -135,11 +135,25 @@ function App() {
     const stored = localStorage.getItem('rajendra-theme')
     return stored || 'dark'
   })
+  const [isResumeOpen, setIsResumeOpen] = useState(false)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('rajendra-theme', theme)
   }, [theme])
+
+  useEffect(() => {
+    if (!isResumeOpen) return
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsResumeOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleEscape)
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [isResumeOpen])
 
   const contactLinks = useMemo(
     () => [
@@ -185,10 +199,10 @@ function App() {
               </p>
 
               <div className="cta-row">
-                <a href="#contact" className="primary-btn">
+                <button type="button" className="primary-btn" onClick={() => setIsResumeOpen(true)}>
                   Get My Resume
                   <ArrowRight size={16} />
-                </a>
+                </button>
                 <a href="#contact" className="secondary-btn">
                   Contact Me
                 </a>
@@ -433,6 +447,28 @@ function App() {
           </div>
         </section>
       </main>
+
+      {isResumeOpen && (
+        <div className="resume-overlay" onClick={() => setIsResumeOpen(false)} role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+          <div className="resume-modal" onClick={(event) => event.stopPropagation()}>
+            <div className="resume-modal-header">
+              <div>
+                <p className="eyebrow resume-eyebrow">RESUME PREVIEW</p>
+                <h3 id="resume-modal-title">Rajendra Surada</h3>
+              </div>
+              <button type="button" className="resume-close" aria-label="Close resume preview" onClick={() => setIsResumeOpen(false)}>
+                <X size={18} />
+              </button>
+            </div>
+            <iframe
+              title="Rajendra Surada Resume"
+              src="/Rajendra__Resume.pdf"
+              className="resume-frame"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      )}
 
       <footer className="site-footer">
         <motion.div

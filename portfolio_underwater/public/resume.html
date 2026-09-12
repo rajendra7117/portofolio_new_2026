@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajendra Surada Resume</title>
+    <style>
+      :root {
+        --bg: #f4fbff;
+        --card: #ffffff;
+        --muted: #5c7284;
+        --text: #11283d;
+        --accent: #0b7db1;
+        --accent-soft: #dff9ff;
+        --line: #d9edf5;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #dff9ff 0%, #f8fdff 100%);
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 32px auto;
+        background: var(--card);
+        box-shadow: 0 24px 54px rgba(11, 36, 52, 0.12);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+      }
+
+      .header {
+        padding: 32px 36px 24px;
+        background: linear-gradient(135deg, #0c2d4b 0%, #0e4f7d 100%);
+        color: white;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 12px;
+        color: rgba(255,255,255,0.8);
+        font-size: 0.96rem;
+      }
+
+      .section {
+        padding: 28px 36px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .summary {
+        margin: 0;
+        line-height: 1.75;
+        color: var(--text);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 28px;
+      }
+
+      .card {
+        background: var(--accent-soft);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+
+      .card strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        line-height: 1.8;
+      }
+
+      .job {
+        margin-bottom: 16px;
+      }
+
+      .job:last-child { margin-bottom: 0; }
+
+      .role {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+
+      .company {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      @media (max-width: 720px) {
+        .page { margin: 18px; }
+        .section, .header { padding-left: 20px; padding-right: 20px; }
+        .grid { grid-template-columns: 1fr; }
+        .role { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Rajendra Surada</h1>
+        <div class="meta">
+          <span>AEM Frontend Developer</span>
+          <span>rajendrabvm007@gmail.com</span>
+          <span>LinkedIn / GitHub</span>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Profile</h2>
+        <p class="summary">
+          Software Engineer with 5+ years of experience in Adobe Experience Manager (AEM), Vue.js,
+          React.js, and modern front-end engineering, building scalable enterprise web experiences
+          for customer-facing digital platforms.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Core Skills</h2>
+        <div class="grid">
+          <div class="card"><strong>Frontend</strong> React.js, Vue.js, JavaScript, HTML5, CSS3</div>
+          <div class="card"><strong>CMS</strong> Adobe Experience Manager (AEM), Component-based UI architecture</div>
+          <div class="card"><strong>State & API</strong> Redux, REST, GraphQL, async data flows</div>
+          <div class="card"><strong>Tooling</strong> Git, Vite, Webpack, npm, debugging and performance tuning</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="role">
+            <span>Front-End Engineer</span>
+            <span>2023 — Present</span>
+          </div>
+          <div class="company">Enterprise Digital Team</div>
+          <ul>
+            <li>Developed reusable front-end interfaces using React and AEM patterns.</li>
+            <li>Improved performance and accessibility across customer-facing experiences.</li>
+            <li>Worked closely with content teams to ship scalable UI improvements.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="role">
+            <span>Frontend Developer</span>
+            <span>2021 — 2023</span>
+          </div>
+          <div class="company">Digital Products</div>
+          <ul>
+            <li>Built responsive web pages and interactive components in Vue and JavaScript.</li>
+            <li>Maintained design consistency with modern component-driven development.</li>
+            <li>Collaborated with QA and stakeholders for release-ready improvements.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <p class="summary">Bachelor&apos;s Degree in Computer Science / Relevant engineering discipline.</p>
+      </section>
+    </div>
+  </body>
+</html>
