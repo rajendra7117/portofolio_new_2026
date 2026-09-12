@@ -1712,7 +1712,7 @@ main {
   background: linear-gradient(180deg, #0a3d6e 0%, #0d4e88 34%, #0a3059 100%);
   color: #eafcff;
   padding-top: 12px;
-  height: 1450px;
+  min-height: 1450px;
   padding-bottom: 20px;
 }
 
