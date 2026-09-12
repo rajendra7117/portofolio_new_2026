@@ -166,7 +166,7 @@ function App() {
       {
         label: 'LinkedIn',
         value: '@rajendra-surada',
-        href: 'https://www.linkedin.com/in/rajendra-surada',
+        href: 'https://www.linkedin.com/in/rajendra-surada-0a66261a0/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B47f0jDzyQwWBiBhEln%2BepQ%3D%3D',
         icon: Globe,
       },
       {
