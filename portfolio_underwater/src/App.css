@@ -219,6 +219,12 @@ main {
   padding-top: 44px;
 }
 
+@media (min-width: 1001px) {
+  .hero-copy {
+    padding-top: 62px;
+  }
+}
+
 .eyebrow {
   display: inline-block;
   color: var(--aqua);
@@ -226,6 +232,27 @@ main {
   font-size: 0.7rem;
   font-weight: 700;
   margin-bottom: 14px;
+}
+
+:root[data-theme='light'] .hero-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(18, 166, 220, 0.12), transparent 42%),
+    linear-gradient(180deg, #edf8ff 0%, #d7ecff 46%, #c4e0ff 100%);
+}
+
+:root[data-theme='light'] .hero-copy .eyebrow,
+:root[data-theme='light'] .hero-copy .subtitle,
+:root[data-theme='light'] .hero-copy .intro,
+:root[data-theme='light'] .hero-quote {
+  color: #0b3b59;
+}
+
+:root[data-theme='light'] .hero-copy .intro {
+  opacity: 1;
+}
+
+:root[data-theme='light'] .hero-quote {
+  text-shadow: 0 0 12px rgba(20, 146, 202, 0.18);
 }
 
 .hero-copy h1 {
@@ -2395,7 +2422,28 @@ main {
     width: 100%;
   }
 
-  .projects-grid,
+  .projects-grid {
+    display: flex;
+    overflow-x: auto;
+    grid-template-columns: none;
+    gap: 16px;
+    padding: 4px 2px 12px;
+    margin-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .projects-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects-grid .project-card {
+    flex: 0 0 82vw;
+    max-width: 82vw;
+    scroll-snap-align: start;
+  }
+
   .skills-grid,
   .certifications-grid {
     grid-template-columns: 1fr;
