@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { motion } from 'motion/react'
-import { ArrowRight, GitBranch, Globe, Mail, X } from 'lucide-react'
+import { AnimatePresence, motion } from 'motion/react'
+import { ArrowRight, ChevronLeft, ChevronRight, GitBranch, Globe, Mail, X } from 'lucide-react'
 import Navbar from './components/Navbar'
 import Bubbles from './components/underwater/Bubbles'
 import FishSchool from './components/underwater/FishSchool'
@@ -136,6 +136,18 @@ function App() {
     return stored || 'dark'
   })
   const [isResumeOpen, setIsResumeOpen] = useState(false)
+  const [projectIndex, setProjectIndex] = useState(0)
+  const [projectDirection, setProjectDirection] = useState(1)
+
+  const showPreviousProject = () => {
+    setProjectDirection(-1)
+    setProjectIndex((currentIndex) => (currentIndex - 1 + projects.length) % projects.length)
+  }
+
+  const showNextProject = () => {
+    setProjectDirection(1)
+    setProjectIndex((currentIndex) => (currentIndex + 1) % projects.length)
+  }
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -199,10 +211,10 @@ function App() {
               </p>
 
               <div className="cta-row">
-                <button type="button" className="primary-btn" onClick={() => setIsResumeOpen(true)}>
+                <motion.button type="button" className="primary-btn" onClick={() => setIsResumeOpen(true)} whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: 0.97 }} transition={{ type: 'spring', stiffness: 360, damping: 20 }}>
                   Get My Resume
                   <ArrowRight size={16} />
-                </button>
+                </motion.button>
                 <a href="#contact" className="secondary-btn">
                   Contact Me
                 </a>
@@ -237,10 +249,41 @@ function App() {
             <img src={fishSmall} alt="" className="project-fish project-fish--small project-fish--four" />
           </div>
 
-          <div className="shell projects-grid">
-            {projects.map((project) => (
-              <article key={project.title} className="project-card">
+          <div
+            className="shell projects-carousel"
+            aria-label="Featured projects carousel"
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowLeft') showPreviousProject()
+              if (event.key === 'ArrowRight') showNextProject()
+            }}
+            tabIndex="0"
+          >
+            <motion.button type="button" className="carousel-control carousel-control--previous" onClick={showPreviousProject} aria-label="Show previous project" whileHover={{ scale: 1.12, x: -2 }} whileTap={{ scale: 0.92 }} transition={{ type: 'spring', stiffness: 380, damping: 20 }}>
+              <ChevronLeft size={22} />
+            </motion.button>
+            <div className="projects-grid" aria-live="polite">
+              <AnimatePresence mode="wait" initial={false} custom={projectDirection}>
+                <motion.article
+                  key={projects[projectIndex].title}
+                  className="project-card"
+                  custom={projectDirection}
+                  variants={{
+                    enter: (direction) => ({ opacity: 0, x: direction * 80 }),
+                    center: { opacity: 1, x: 0 },
+                    exit: (direction) => ({ opacity: 0, x: direction * -80 }),
+                  }}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.36, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {(() => {
+                    const project = projects[projectIndex]
+
+                    return (
+                      <>
                 <div className={`project-visual visual-${project.visual}`} aria-hidden="true">
+                  <img src={project.thumbnail} alt="" className="project-thumbnail" />
                   <span className="project-badge">{project.technologies[0]}</span>
                 </div>
                 <div className="project-body">
@@ -254,16 +297,41 @@ function App() {
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                   <div className="project-links">
-                    <a href={project.liveUrl} className="primary-btn small-btn" target="_blank" rel="noreferrer">
+                    <motion.a href={project.liveUrl} className="primary-btn small-btn" target="_blank" rel="noreferrer" whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: 0.97 }} transition={{ type: 'spring', stiffness: 360, damping: 20 }}>
                       Live Site
-                    </a>
-                    <a href={project.githubUrl} className="secondary-btn small-btn" target="_blank" rel="noreferrer">
+                    </motion.a>
+                    <motion.a href={project.githubUrl} className="secondary-btn small-btn" target="_blank" rel="noreferrer" whileHover={{ y: -3, scale: 1.03 }} whileTap={{ scale: 0.97 }} transition={{ type: 'spring', stiffness: 360, damping: 20 }}>
                       View Code
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
-              </article>
-            ))}
+                      </>
+                    )
+                  })()}
+                </motion.article>
+              </AnimatePresence>
+            </div>
+            <motion.button type="button" className="carousel-control carousel-control--next" onClick={showNextProject} aria-label="Show next project" whileHover={{ scale: 1.12, x: 2 }} whileTap={{ scale: 0.92 }} transition={{ type: 'spring', stiffness: 380, damping: 20 }}>
+              <ChevronRight size={22} />
+            </motion.button>
+            <div className="carousel-dots" aria-label="Choose a project">
+              {projects.map((project, index) => (
+                <motion.button
+                  key={project.title}
+                  type="button"
+                  className={`carousel-dot${index === projectIndex ? ' is-active' : ''}`}
+                  onClick={() => {
+                    setProjectDirection(index >= projectIndex ? 1 : -1)
+                    setProjectIndex(index)
+                  }}
+                  aria-label={`Show ${project.title}`}
+                  aria-current={index === projectIndex ? 'true' : undefined}
+                  whileHover={{ scale: 1.35 }}
+                  whileTap={{ scale: 0.8 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+                />
+              ))}
+            </div>
           </div>
           <OceanWave variant="dark-to-light" className="projects-wave" />
         </section>
@@ -456,9 +524,9 @@ function App() {
                 <p className="eyebrow resume-eyebrow">RESUME PREVIEW</p>
                 <h3 id="resume-modal-title">Rajendra Surada</h3>
               </div>
-              <button type="button" className="resume-close" aria-label="Close resume preview" onClick={() => setIsResumeOpen(false)}>
+              <motion.button type="button" className="resume-close" aria-label="Close resume preview" onClick={() => setIsResumeOpen(false)} whileHover={{ rotate: 90, scale: 1.08 }} whileTap={{ scale: 0.9 }} transition={{ type: 'spring', stiffness: 300, damping: 16 }}>
                 <X size={18} />
-              </button>
+              </motion.button>
             </div>
             <iframe
               title="Rajendra Surada Resume"
@@ -500,14 +568,17 @@ function App() {
             <a href="mailto:rajendra@example.com">Email</a>
           </div>
         </div>
-        <button
+        <motion.button
           type="button"
           className="back-to-top"
           aria-label="Back to top"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          whileHover={{ y: -4, scale: 1.08 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: 'spring', stiffness: 340, damping: 18 }}
         >
           ↑
-        </button>
+        </motion.button>
       </footer>
     </>
   )
