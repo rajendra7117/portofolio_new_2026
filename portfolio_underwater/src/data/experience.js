@@ -1,7 +1,7 @@
 export const experience = [
   {
     company: 'IBM Pvt Ltd',
-    role: 'Associate Technical Engineer',
+    role: 'Associate Technical Engineer (React.js / JavaScript / Node.js / Express.js / MongoDB)',
     dates: 'Oct 2020 – June 2021',
     responsibilities: [
       'Developed and enhanced full-stack web applications using React.js, JavaScript, Node.js, Express.js, and MongoDB.',
@@ -11,7 +11,7 @@ export const experience = [
   },
   {
     company: 'Kyndryl Pvt Ltd',
-    role: 'Systems Administrator',
+    role: 'Systems Administrator (React.js / JavaScript / Node.js / Express.js / MongoDB)',
     dates: 'June 2021 – July 2022',
     responsibilities: [
       'Developed end-to-end web application features using React.js and the MERN stack across frontend and backend layers.',
@@ -21,7 +21,7 @@ export const experience = [
   },
   {
     company: 'Tata Consultancy Services',
-    role: 'AEM Frontend Developer (Vue.js 3 / CSS / AEM)',
+    role: 'AEM Frontend Developer (Vue.js 3 / Java / AEM)',
     dates: 'Aug 2022 – Present',
     responsibilities: [
       'Developed scalable, responsive AEM and Vue.js 3 experiences for high-traffic airline and enterprise platforms.',
